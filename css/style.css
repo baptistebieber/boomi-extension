@@ -1,0 +1,13 @@
+#process_state_details {
+    height: 600px;
+}
+
+#process_state_details .gwt-StyledScrollPanel {
+    height: 555px;
+}
+
+#execution_detail_panel .connectors .connector_entry {
+    display: inline-block !important;
+    width: 30%;
+    min-width: 150px;
+}
