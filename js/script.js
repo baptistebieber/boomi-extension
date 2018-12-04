@@ -167,16 +167,22 @@ function add_menu() {
 }
 
 function generate_actions() {
-    $(window).keypress(function(event) {
-        if (!(event.which == 115 && event.ctrlKey) && !(event.which == 19)) {
-            return true;
-        }
-        event.preventDefault();
-        update_page();
-        if(page == 'build' && $('.gwt-TabLayoutPanelContentContainer > div:visible button[data-locator=button-save]').count() > 0) {
-            $('.gwt-TabLayoutPanelContentContainer > div:visible button[data-locator=button-save]')[0].click()
-        }
-    });
+    // $(window).keypress(function(event) {
+    //     console.log(event.which);
+    //     if (!(event.which == 115 && event.ctrlKey) && !(event.which == 19) && !(event.which == 116)) {
+    //         return true;
+    //     }
+    //     event.preventDefault();
+    //     update_page();
+    //     if(page == 'build' && $('.gwt-TabLayoutPanelContentContainer > div:visible button[data-locator=button-save]').count() > 0) {
+    //         $('.gwt-TabLayoutPanelContentContainer > div:visible button[data-locator=button-save]')[0].click()
+    //     }
+    //     else if(page == 'reporting') {
+    //         if(event.which == 116) {
+    //             $('.refresh_button')[0].click();
+    //         }
+    //     }
+    // });
 }
 
 var count_ready= 0;
