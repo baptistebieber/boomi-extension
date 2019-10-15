@@ -114,10 +114,10 @@ function generate_modale() {
 
 function add_menu() {
     generate_all_menu();
-    $('#masthead .navigation_links > ul').append($('<li id="import_export_menu" style="float:right;" alt="hidden"><a class="gwt-Anchor" href="#">Import/Export</a></li>'));
-    $('#masthead .navigation_links > ul').append($('<li id="delete_from_menu" style="float:right;" alt="hidden"><a class="gwt-Anchor" href="#">Clear</a></li>'));
-    $('#masthead .navigation_links > ul').append($('<li id="add_to_menu" style="float:right;"><a class="gwt-Anchor" href="#">+ Add to Menu</a></li>'));
-    $('#masthead .navigation_links > ul').append($('<li id="refresh_reporting" style="float:right;"><a class="gwt-Anchor" href="#" alt="off">Start Refresh</a></li>'));
+    $('#masthead .navigation_links > ul').append($('<li id="import_export_menu" style="position:absolute;right:345px;" alt="hidden"><a class="gwt-Anchor" href="#">Import/Export</a></li>'));
+    $('#masthead .navigation_links > ul').append($('<li id="delete_from_menu" style="position:absolute;right:270px;" alt="hidden"><a class="gwt-Anchor" href="#">Clear</a></li>'));
+    $('#masthead .navigation_links > ul').append($('<li id="add_to_menu" style="position:absolute;right:130px;"><a class="gwt-Anchor" href="#">+ Add to Menu</a></li>'));
+    $('#masthead .navigation_links > ul').append($('<li id="refresh_reporting" style="position:absolute;right:0px;"><a class="gwt-Anchor" href="#" alt="off">Start Refresh</a></li>'));
     $('#add_to_menu').click(function(event) {
         event.preventDefault();
         set_type_modale('add_menu');
