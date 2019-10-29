@@ -1,7 +1,7 @@
 {
     "manifest_version": 2, 
     "name": "Boomi Extension",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "author": "Baptiste BIEBER",
     "description": "Add functionalities to Boomi!",
     "homepage_url" : "https://github.com/baptistebieber/boomi-extension",
