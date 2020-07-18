@@ -1,9 +1,9 @@
 {
     "manifest_version": 2, 
     "name": "Boomi Extension",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "author": "Baptiste BIEBER",
-    "description": "Add functionalities to Boomi!",
+    "description": "Some new functionalities for the DELL Boomi AtomSphere",
     "homepage_url" : "https://github.com/baptistebieber/boomi-extension",
     "icons": {
         "16": "img/icon-16.png",
@@ -20,6 +20,6 @@
         "js" : ["js/jquery.min.js","js/script.js"] 
     }],
     "permissions": [ 
-        "tabs", "https://platform.boomi.com/*" 
+        // "tabs", "https://platform.boomi.com/*" 
     ]
 }

@@ -10,7 +10,7 @@ function update_page() {
 
 function refresh_reporting() {
     if(do_refresh) {
-        $('.refresh_button')[0].click();
+        $('button[data-locator=button-refresh]')[0].click();
         console.log('Refresh');
         setTimeout(function() { refresh_reporting(); } , frequence_refresh*1000);
     }
@@ -48,7 +48,7 @@ function close_modale() {
 }
 
 function new_elem_menu(k, name, link) {
-    $('#masthead .navigation_links > ul').append($('<li id="link_'+k+'"><a contextmenu="mymenu" class="gwt-Anchor" href="'+link+'">'+name+'<span class="delete_favorite" style="display:none;margin-right:5px;">x</span></a></li>'));
+    $('#new-masthead .qm-c-servicenav > ul').append($('<li id="link_'+k+'" class="qm-c-servicenav__nav-item"><a contextmenu="mymenu" class="gwt-Anchor qm-c-servicenav__nav-link qm-a--alternate" href="'+link+'">'+name+'<span class="delete_favorite" style="display:none;margin-right:5px;">x</span></a></li>'));
 }
 
 function clear_menu() {
@@ -114,10 +114,10 @@ function generate_modale() {
 
 function add_menu() {
     generate_all_menu();
-    $('#masthead .navigation_links > ul').append($('<li id="import_export_menu" style="position:absolute;right:345px;" alt="hidden"><a class="gwt-Anchor" href="#">Import/Export</a></li>'));
-    $('#masthead .navigation_links > ul').append($('<li id="delete_from_menu" style="position:absolute;right:270px;" alt="hidden"><a class="gwt-Anchor" href="#">Clear</a></li>'));
-    $('#masthead .navigation_links > ul').append($('<li id="add_to_menu" style="position:absolute;right:130px;"><a class="gwt-Anchor" href="#">+ Add to Menu</a></li>'));
-    $('#masthead .navigation_links > ul').append($('<li id="refresh_reporting" style="position:absolute;right:0px;"><a class="gwt-Anchor" href="#" alt="off">Start Refresh</a></li>'));
+    $('#new-masthead .qm-c-servicenav > ul').append($('<li id="import_export_menu" class="qm-c-servicenav__nav-item" style="position:absolute;right:345px;height: 3.5em;" alt="hidden"><a class="gwt-Anchor qm-c-servicenav__nav-link qm-a--alternate" href="#">Import/Export</a></li>'));
+    $('#new-masthead .qm-c-servicenav > ul').append($('<li id="delete_from_menu" class="qm-c-servicenav__nav-item" style="position:absolute;right:270px;height: 3.5em;" alt="hidden"><a class="gwt-Anchor qm-c-servicenav__nav-link qm-a--alternate" href="#">Clear</a></li>'));
+    $('#new-masthead .qm-c-servicenav > ul').append($('<li id="add_to_menu" class="qm-c-servicenav__nav-item" style="position:absolute;right:130px;height: 3.5em;"><a class="gwt-Anchor qm-c-servicenav__nav-link qm-a--alternate" href="#">+ Add to Menu</a></li>'));
+    $('#new-masthead .qm-c-servicenav > ul').append($('<li id="refresh_reporting" class="qm-c-servicenav__nav-item" style="position:absolute;right:0px;height: 3.5em;"><a class="gwt-Anchor qm-c-servicenav__nav-link qm-a--alternate" href="#" alt="off">Start Refresh</a></li>'));
     $('#add_to_menu').click(function(event) {
         event.preventDefault();
         set_type_modale('add_menu');
@@ -191,7 +191,7 @@ function is_ready() {
     if(count_ready> 60) {
        console.log('To long');
     }
-    else if($('#masthead .navigation_links').length === 0) {
+    else if($('#new-masthead .qm-c-servicenav .qm-c-servicenav__nav-item').length === 0) {
         console.log('not yet');
         setTimeout(function() { is_ready(); } , 1000);
     }
