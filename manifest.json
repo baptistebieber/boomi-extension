@@ -20,6 +20,5 @@
         "js" : ["js/jquery.min.js","js/script.js"] 
     }],
     "permissions": [ 
-        // "tabs", "https://platform.boomi.com/*" 
     ]
 }
